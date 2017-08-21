@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.8
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartValidations", "src\SmartValidations\SmartValidations.csproj", "{18E8E02C-C204-43AB-8974-A2883BF23039}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartValidations.Test", "test\SmartValidations.Test\SmartValidations.Test.csproj", "{217EB91D-3AE2-4BCB-B948-AF18DED68170}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18E8E02C-C204-43AB-8974-A2883BF23039}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18E8E02C-C204-43AB-8974-A2883BF23039}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18E8E02C-C204-43AB-8974-A2883BF23039}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18E8E02C-C204-43AB-8974-A2883BF23039}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217EB91D-3AE2-4BCB-B948-AF18DED68170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217EB91D-3AE2-4BCB-B948-AF18DED68170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217EB91D-3AE2-4BCB-B948-AF18DED68170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217EB91D-3AE2-4BCB-B948-AF18DED68170}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A810D442-37A9-4522-BD63-2414047A28AB}
+	EndGlobalSection
+EndGlobal
