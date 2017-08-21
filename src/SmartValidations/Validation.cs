@@ -2,9 +2,9 @@
 
 namespace SmartValidations
 {
-    public class Validation<T> : IValidation<T>
+    public class Validation : IValidation
     {
-        public bool IsValid(T obj)
+        public bool IsValid()
         {
             throw new NotImplementedException();
         }

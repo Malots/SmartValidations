@@ -1,7 +1,7 @@
 ﻿namespace SmartValidations
 {
-    public interface IValidation<T>
+    public interface IValidation
     {
-        bool IsValid(T obj);
+        bool IsValid();
     }
 }
