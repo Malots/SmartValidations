@@ -1,0 +1,33 @@
+﻿using HelperConversion;
+
+namespace SmartValidations.ValueObjects
+{
+    public class PIS : IValidation
+    {
+        public PIS(string pis)
+        {
+            Pis = pis.GetOnlyNumbers();
+        }
+
+        public string Pis { get; private set; }
+
+        public bool IsValid()
+        {
+            int[] mult = new int[10] { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };
+            int sum;
+            int rest;
+            if (Pis.Length != 11)
+                return false;
+            Pis = Pis.PadLeft(11, '0');
+            sum = 0;
+            for (int i = 0; i < 10; i++)
+                sum += int.Parse(Pis[i].ToString()) * mult[i];
+            rest = sum % 11;
+            if (rest < 2)
+                rest = 0;
+            else
+                rest = 11 - rest;
+            return Pis.EndsWith(rest.ToString());
+        }
+    }
+}

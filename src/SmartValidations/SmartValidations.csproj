@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Malots.FluentSpecification.Specification" Version="1.0.1" />
+    <PackageReference Include="Malots.HelperConversion.Extension" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
