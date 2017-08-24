@@ -117,5 +117,13 @@ namespace SmartValidations.Test
             Email email = new Email("email&%@email.com");
             Assert.IsFalse(email.IsValid());
         }
+
+        [TestMethod]
+        [TestCategory("CNH")]
+        public void GiveAValidCnhReturnTrue()
+        {
+            CNH cnh = new CNH("56551780945");
+            Assert.IsTrue(cnh.IsValid());
+        }
     }
 }
