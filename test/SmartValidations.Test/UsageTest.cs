@@ -125,5 +125,45 @@ namespace SmartValidations.Test
             CNH cnh = new CNH("56551780945");
             Assert.IsTrue(cnh.IsValid());
         }
+
+        [TestMethod]
+        [TestCategory("CNH")]
+        public void GiveAInvalidCnhReturnFalse()
+        {
+            CNH cnh = new CNH("12345678912");
+            Assert.IsFalse(cnh.IsValid());
+        }
+
+        [TestMethod]
+        [TestCategory("Credit Card")]
+        public void GiveAValidCreditCardNumberReturnTrue()
+        {
+            CreditCard card = new CreditCard("4799564602300008");
+            Assert.IsTrue(card.IsValid());
+        }
+
+        [TestMethod]
+        [TestCategory("Credit Card")]
+        public void GiveAInvalidCreditCardNumberReturnFalse()
+        {
+            CreditCard card = new CreditCard("1234567894512");
+            Assert.IsFalse(card.IsValid());
+        }
+
+        [TestMethod]
+        [TestCategory("UF")]
+        public void GiveAValidUFReturnTrue()
+        {
+            UF uf = new UF("SP");
+            Assert.IsTrue(uf.IsValid());
+        }
+
+        [TestMethod]
+        [TestCategory("UF")]
+        public void GiveAInvalidUFReturnFalse()
+        {
+            UF uf = new UF("ABSP");
+            Assert.IsFalse(uf.IsValid());
+        }
     }
 }

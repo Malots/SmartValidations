@@ -1,5 +1,4 @@
 ﻿using HelperConversion;
-using System;
 
 namespace SmartValidations.ValueObjects
 {
@@ -39,38 +38,38 @@ namespace SmartValidations.ValueObjects
                 case "99999999999":
                     return false;
             }
-            int vBase = 0;
-            int vSoma = 0;
-            int vFator = 9;
+            int baseValue = 0;
+            int sum = 0;
+            int factor = 9;
             for (int i = 0; i <= 8; i++) {
-                vSoma += (Convert.ToInt32(Cnh[i]) * vFator);
-                vFator--;
+                sum += ((int)char.GetNumericValue(Cnh[i]) * factor);
+                factor--;
             }
-            int vResto = vSoma % 11;
-            if (vResto == 10) 
-              vBase = -2;
-            if (vResto > 9)
-              vResto = 0;
-            string sResultado = vResto.ToString();
-            vSoma = 0;
-            vFator = 1;
+            int rest = sum % 11;
+            if (rest == 10) 
+              baseValue = -2;
+            if (rest > 9)
+              rest = 0;
+            string result = rest.ToString();
+            sum = 0;
+            factor = 1;
             for (int i = 0; i <= 8; i++) {
-                vSoma = vSoma + (Convert.ToInt32(Cnh[i]) * vFator);
-                vFator++;
+                sum += ((int)char.GetNumericValue(Cnh[i]) * factor);
+                factor++;
             }
 
-            if ((vSoma % 11) + vBase < 0)
-                vResto = 11 + (vSoma % 11) + vBase;
+            if (((sum % 11) + baseValue) < 0)
+                rest = 11 + (sum % 11) + baseValue;
 
-            if ((vSoma % 11) + vBase >= 0)
-                vResto = (vSoma % 11) + vBase;
+            if (((sum % 11) + baseValue) >= 0)
+                rest = (sum % 11) + baseValue;
 
-            if (vResto > 9)
-              vResto = 0;
+            if (rest > 9)
+              rest = 0;
 
-            sResultado = sResultado + vResto.ToString();
+            result = result + rest.ToString();
 
-            if (Cnh.Substring(8, 2) == sResultado)
+            if (Cnh.Substring(9, 2) == result)
                 return true;
             return false;
         }
