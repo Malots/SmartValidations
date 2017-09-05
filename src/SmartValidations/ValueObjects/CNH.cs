@@ -42,7 +42,7 @@ namespace SmartValidations.ValueObjects
             int sum = 0;
             int factor = 9;
             for (int i = 0; i <= 8; i++) {
-                sum += ((int)char.GetNumericValue(Cnh[i]) * factor);
+                sum += (Cnh[i].ToString().ToIntDef(0) * factor);
                 factor--;
             }
             int rest = sum % 11;
@@ -54,7 +54,7 @@ namespace SmartValidations.ValueObjects
             sum = 0;
             factor = 1;
             for (int i = 0; i <= 8; i++) {
-                sum += ((int)char.GetNumericValue(Cnh[i]) * factor);
+                sum += (Cnh[i].ToString().ToIntDef(0) * factor);
                 factor++;
             }
 

@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Malots.SmartValidations</PackageId>
+    <Authors>leonardovene</Authors>
+    <Company>Malots</Company>
+    <Description>Package with useful validations</Description>
+    <Copyright>Malots</Copyright>
+    <RepositoryUrl>https://github.com/Malots/SmartValidations.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/Malots/SmartValidations.git</PackageProjectUrl>
+    <PackageTags>validations validations-documents</PackageTags>
+    <NeutralLanguage>Inglês (Estados Unidos)</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
