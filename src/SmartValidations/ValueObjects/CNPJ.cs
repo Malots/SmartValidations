@@ -2,15 +2,29 @@
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// CNPJ value Object
+    /// </summary>
     public class CNPJ : IValidation
     {
+        /// <summary>
+        /// Create CNPJ value object
+        /// </summary>
+        /// <param name="cnpj">cnpj value</param>
         public CNPJ(string cnpj)
         {
             Cnpj = cnpj.GetOnlyNumbers();
         }
 
+        /// <summary>
+        /// CNPJ value
+        /// </summary>
         public string Cnpj { get; private set; }
 
+        /// <summary>
+        /// Check if CNPJ is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             int[] multOne = new int[12] { 5, 4, 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };

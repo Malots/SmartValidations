@@ -2,15 +2,29 @@
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// CNH value object
+    /// </summary>
     public class CNH : IValidation
     {
+        /// <summary>
+        /// Create a CNH value object
+        /// </summary>
+        /// <param name="cnh">cnh value</param>
         public CNH(string cnh)
         {
             Cnh = cnh.GetOnlyNumbers();
         }
 
+        /// <summary>
+        /// CNH value
+        /// </summary>
         public string Cnh { get; private set; }
 
+        /// <summary>
+        /// Check if CNH is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             if (Cnh.Length != 11)
@@ -42,7 +56,7 @@ namespace SmartValidations.ValueObjects
             int sum = 0;
             int factor = 9;
             for (int i = 0; i <= 8; i++) {
-                sum += (Cnh[i].ToString().ToIntDef(0) * factor);
+                sum += (Cnh[i].ToString().ToInt32(0) * factor);
                 factor--;
             }
             int rest = sum % 11;
@@ -54,7 +68,7 @@ namespace SmartValidations.ValueObjects
             sum = 0;
             factor = 1;
             for (int i = 0; i <= 8; i++) {
-                sum += (Cnh[i].ToString().ToIntDef(0) * factor);
+                sum += (Cnh[i].ToString().ToInt32(0) * factor);
                 factor++;
             }
 

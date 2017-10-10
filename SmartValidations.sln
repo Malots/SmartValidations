@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.8
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartValidations", "src\SmartValidations\SmartValidations.csproj", "{18E8E02C-C204-43AB-8974-A2883BF23039}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartValidations", "src\SmartValidations\SmartValidations.csproj", "{18E8E02C-C204-43AB-8974-A2883BF23039}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartValidations.Test", "test\SmartValidations.Test\SmartValidations.Test.csproj", "{217EB91D-3AE2-4BCB-B948-AF18DED68170}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartValidations.Test", "test\SmartValidations.Test\SmartValidations.Test.csproj", "{217EB91D-3AE2-4BCB-B948-AF18DED68170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

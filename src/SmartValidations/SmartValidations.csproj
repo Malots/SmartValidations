@@ -13,10 +13,11 @@
     <PackageProjectUrl>https://github.com/Malots/SmartValidations.git</PackageProjectUrl>
     <PackageTags>validations validations-documents</PackageTags>
     <NeutralLanguage>Inglês (Estados Unidos)</NeutralLanguage>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Malots.HelperConversion.Extension" Version="1.0.0" />
+    <PackageReference Include="Malots.HelperConversion.Extension" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

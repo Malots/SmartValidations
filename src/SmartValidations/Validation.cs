@@ -2,8 +2,17 @@
 
 namespace SmartValidations
 {
+    /// <summary>
+    /// Webservices
+    /// </summary>
     public static class Validation
     {
+        /// <summary>
+        /// Extension validation
+        /// </summary>
+        /// <param name="value">string value</param>
+        /// <param name="op">type of validation</param>
+        /// <returns>true or false</returns>
         public static bool IsValid(this string value, Options op)
         {
             switch (op)

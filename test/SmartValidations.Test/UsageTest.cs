@@ -6,11 +6,12 @@ namespace SmartValidations.Test
     [TestClass]
     public class UsageTest
     {
+        #region CPF
         [TestMethod]
         [TestCategory("CPF")]
         public void GiveAValidWithMaskCpfReturnTrue()
         {
-            CPF cpf = new CPF("663.551.518-69");
+            var cpf = new CPF("663.551.518-69");
             Assert.IsTrue(cpf.IsValid());
         }
 
@@ -25,7 +26,7 @@ namespace SmartValidations.Test
         [TestCategory("CPF")]
         public void GiveAValidWithoutMaskCpfReturnTrue()
         {
-            CPF cpf = new CPF("66355151869");
+            var cpf = new CPF("66355151869");
             Assert.IsTrue(cpf.IsValid());
         }
 
@@ -33,7 +34,7 @@ namespace SmartValidations.Test
         [TestCategory("CPF")]
         public void GiveAInvalidCpfReturnFalse()
         {
-            CPF cpf = new CPF("123.456.789-10");
+            var cpf = new CPF("123.456.789-10");
             Assert.IsFalse(cpf.IsValid());
         }
 
@@ -41,15 +42,17 @@ namespace SmartValidations.Test
         [TestCategory("CPF")]
         public void GiveAInvalidOneNumberCpfReturnFalse()
         {
-            CPF cpf = new CPF("111.111.111-11");
+            var cpf = new CPF("111.111.111-11");
             Assert.IsFalse(cpf.IsValid());
         }
+        #endregion
 
+        #region CNPJ
         [TestMethod]
         [TestCategory("CNPJ")]
         public void GiveAValidWithMaskCnpjReturnTrue()
         {
-            CNPJ cnpj = new CNPJ("22.332.411/0001-17");
+            var cnpj = new CNPJ("22.332.411/0001-17");
             Assert.IsTrue(cnpj.IsValid());
         }
 
@@ -64,7 +67,7 @@ namespace SmartValidations.Test
         [TestCategory("CNPJ")]
         public void GiveAValidWithoutMaskCnpjReturnTrue()
         {
-            CNPJ cnpj = new CNPJ("22332411000117");
+            var cnpj = new CNPJ("22332411000117");
             Assert.IsTrue(cnpj.IsValid());
         }
 
@@ -72,7 +75,7 @@ namespace SmartValidations.Test
         [TestCategory("CNPJ")]
         public void GiveAInvalidCnpjReturnFalse()
         {
-            CNPJ cnpj = new CNPJ("11.111.111/1111-11");
+            var cnpj = new CNPJ("11.111.111/1111-11");
             Assert.IsFalse(cnpj.IsValid());
         }
 
@@ -80,15 +83,17 @@ namespace SmartValidations.Test
         [TestCategory("CNPJ")]
         public void GiveAInvalidOneNumberCnpjReturnFalse()
         {
-            CNPJ cnpj = new CNPJ("11111111111111");
+            var cnpj = new CNPJ("11111111111111");
             Assert.IsFalse(cnpj.IsValid());
         }
+        #endregion
 
+        #region PIS
         [TestMethod]
         [TestCategory("PIS")]
         public void GiveAValidWithMaskPisReturnTrue()
         {
-            PIS pis = new PIS("644.83804.32-7");
+            var pis = new PIS("644.83804.32-7");
             Assert.IsTrue(pis.IsValid());
         }
 
@@ -103,7 +108,7 @@ namespace SmartValidations.Test
         [TestCategory("PIS")]
         public void GiveAValidWithoutMaskPisReturnTrue()
         {
-            PIS pis = new PIS("64483804327");
+            var pis = new PIS("64483804327");
             Assert.IsTrue(pis.IsValid());
         }
 
@@ -111,7 +116,7 @@ namespace SmartValidations.Test
         [TestCategory("PIS")]
         public void GiveAInvalidPisReturnFalse()
         {
-            PIS pis = new PIS("111.11111.11-1");
+            var pis = new PIS("111.11111.11-1");
             Assert.IsFalse(pis.IsValid());
         }
 
@@ -119,15 +124,17 @@ namespace SmartValidations.Test
         [TestCategory("PIS")]
         public void GiveAInvalidOneNumberPisReturnFalse()
         {
-            PIS pis = new PIS("11111111111");
+            var pis = new PIS("11111111111");
             Assert.IsFalse(pis.IsValid());
         }
+        #endregion
 
+        #region Email
         [TestMethod]
         [TestCategory("Email")]
         public void GiveAValidEmailReturnTrue()
         {
-            Email email = new Email("email@email.com");
+            var email = new Email("email@email.com");
             Assert.IsTrue(email.IsValid());
         }
 
@@ -142,15 +149,17 @@ namespace SmartValidations.Test
         [TestCategory("Email")]
         public void GiveAInvalidEmailReturnFalse()
         {
-            Email email = new Email("email&%@email.com");
+            var email = new Email("email&%@email.com");
             Assert.IsFalse(email.IsValid());
         }
+        #endregion
 
+        #region CNH
         [TestMethod]
         [TestCategory("CNH")]
         public void GiveAValidCnhReturnTrue()
         {
-            CNH cnh = new CNH("56551780945");
+            var cnh = new CNH("56551780945");
             Assert.IsTrue(cnh.IsValid());
         }
 
@@ -165,15 +174,17 @@ namespace SmartValidations.Test
         [TestCategory("CNH")]
         public void GiveAInvalidCnhReturnFalse()
         {
-            CNH cnh = new CNH("12345678912");
+            var cnh = new CNH("12345678912");
             Assert.IsFalse(cnh.IsValid());
         }
+        #endregion
 
+        #region Credit Card
         [TestMethod]
         [TestCategory("Credit Card")]
         public void GiveAValidCreditCardNumberReturnTrue()
         {
-            CreditCard card = new CreditCard("4799564602300008");
+            var card = new CreditCard("4799564602300008");
             Assert.IsTrue(card.IsValid());
         }
 
@@ -188,15 +199,17 @@ namespace SmartValidations.Test
         [TestCategory("Credit Card")]
         public void GiveAInvalidCreditCardNumberReturnFalse()
         {
-            CreditCard card = new CreditCard("1234567894512");
+            var card = new CreditCard("1234567894512");
             Assert.IsFalse(card.IsValid());
         }
+        #endregion
 
+        #region UF
         [TestMethod]
         [TestCategory("UF")]
         public void GiveAValidUFReturnTrue()
         {
-            UF uf = new UF("SP");
+            var uf = new UF("SP");
             Assert.IsTrue(uf.IsValid());
         }
 
@@ -211,15 +224,17 @@ namespace SmartValidations.Test
         [TestCategory("UF")]
         public void GiveAInvalidUFReturnFalse()
         {
-            UF uf = new UF("ABSP");
+            var uf = new UF("ABSP");
             Assert.IsFalse(uf.IsValid());
         }
+        #endregion
 
+        #region CEP
         [TestMethod]
         [TestCategory("CEP")]
         public void GiveAValidCepReturnTrue()
         {
-            CEP cep = new CEP("19026-570","SP");
+            var cep = new CEP("19026-570","SP");
             Assert.IsTrue(cep.IsValid());
         }
 
@@ -234,8 +249,9 @@ namespace SmartValidations.Test
         [TestCategory("CEP")]
         public void GiveAInvalidCepReturnFalse()
         {
-            CEP cep = new CEP("19026-570", "PR");
+            var cep = new CEP("19026-570", "PR");
             Assert.IsFalse(cep.IsValid());
         }
+        #endregion
     }
 }

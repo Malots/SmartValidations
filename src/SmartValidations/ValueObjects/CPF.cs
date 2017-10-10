@@ -2,15 +2,34 @@
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// CPF value object
+    /// </summary>
     public class CPF : IValidation
     {
+        /// <summary>
+        /// Create CPJ value object
+        /// </summary>
+        /// <param name="cpf">cpf value</param>
         public CPF(string cpf)
         {
             Cpf = cpf.GetOnlyNumbers();
         }
 
-        public string Cpf { get; private set; }
+        /// <summary>
+        /// CPF value
+        /// </summary>
+        public string Cpf { get ; private set; }
 
+        /// <summary>
+        /// Property to get original value
+        /// </summary>
+        private string Value;
+
+        /// <summary>
+        /// Check if CPF is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             int[] multOne = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };

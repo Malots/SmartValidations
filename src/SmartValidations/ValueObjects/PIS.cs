@@ -2,15 +2,29 @@
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// PIS value object
+    /// </summary>
     public class PIS : IValidation
     {
+        /// <summary>
+        /// Create PIS value object
+        /// </summary>
+        /// <param name="pis">pis value</param>
         public PIS(string pis)
         {
             Pis = pis.GetOnlyNumbers();
         }
 
+        /// <summary>
+        /// Pis value
+        /// </summary>
         public string Pis { get; private set; }
 
+        /// <summary>
+        /// Check PIS is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             int[] mult = new int[10] { 3, 2, 9, 8, 7, 6, 5, 4, 3, 2 };

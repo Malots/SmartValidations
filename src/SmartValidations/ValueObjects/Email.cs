@@ -4,16 +4,34 @@ using System.Text.RegularExpressions;
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// Email value object
+    /// </summary>
     public class Email : IValidation
     {
+        /// <summary>
+        /// Create value object email
+        /// </summary>
+        /// <param name="address">email address</param>
         public Email(string address)
         {
             Address = address;
         }
 
+        /// <summary>
+        /// Email address value
+        /// </summary>
         public string Address { get; private set; }
+
+        /// <summary>
+        /// Property for domain validation
+        /// </summary>
         private bool invalid = false;
 
+        /// <summary>
+        /// Check if email address is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             invalid = false;
@@ -44,6 +62,11 @@ namespace SmartValidations.ValueObjects
             }
         }
 
+        /// <summary>
+        /// Check domain
+        /// </summary>
+        /// <param name="match">domain match</param>
+        /// <returns>domain string</returns>
         private string DomainMapper(Match match)
         {
             IdnMapping idn = new IdnMapping();

@@ -2,15 +2,29 @@
 
 namespace SmartValidations.ValueObjects
 {
+    /// <summary>
+    /// CreditCard value object
+    /// </summary>
     public class CreditCard : IValidation
     {
+        /// <summary>
+        /// Create CreditCard Value Object
+        /// </summary>
+        /// <param name="number">credit card number</param>
         public CreditCard(string number)
         {
             Number = number.GetOnlyNumbers();
         }
 
+        /// <summary>
+        /// CreditCard number
+        /// </summary>
         public string Number { get; private set; }
 
+        /// <summary>
+        /// Check if credit card number is valid
+        /// </summary>
+        /// <returns>true or false</returns>
         public bool IsValid()
         {
             int idLength = Number.Length;
